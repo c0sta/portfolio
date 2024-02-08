@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Typography } from ".";
-import { contentMocked, defaultProps } from "./contants";
+import { Typography } from "../Typography";
+import { contentMocked, defaultProps } from "./constants";
 
 const meta: Meta<typeof Typography> = {
   component: Typography,

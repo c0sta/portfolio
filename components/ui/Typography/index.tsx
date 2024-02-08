@@ -1,4 +1,4 @@
-import { variants } from "./contants";
+import { variants } from "./constants";
 import { TypographyProps } from "./types";
 
 export function Typography({
@@ -7,12 +7,14 @@ export function Typography({
   weight = "default",
   type = "description",
   children,
+  ...rest
 }: TypographyProps) {
-  const className = `${variants.color[color]} ${variants.weight[weight]} ${variants.size[size]}`;
+  const className = `${variants.color[color]} ${variants.weight[weight]} ${variants.size[size]} ${rest.className ?? ""}`;
 
   if (type === "title") return <h1 className={className}>{children}</h1>;
   if (type === "subtitle") return <h2 className={className}>{children}</h2>;
-  if (type === "description") return <p className={className}>{children}</p>;
+  if (type === "description")
+    return <p className={className + " text-justify leading-6"}>{children}</p>;
 }
 
 export const Title = ({ children, ...props }: Partial<TypographyProps>) => {

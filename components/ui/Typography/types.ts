@@ -4,4 +4,5 @@ export interface TypographyProps {
   color?: "primary" | "default" | "secondary";
   type?: "title" | "description" | "subtitle";
   children: React.ReactNode;
+  className?: string;
 }
