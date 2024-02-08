@@ -5,4 +5,62 @@
 body {
   width: 100vw;
   height: 100vh;
+  scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #e5e7eb;
+  border-radius: 8px;
+}
+@layer components {
+  .base-button {
+    @apply flex w-auto items-center gap-2 rounded-md px-3 py-2 transition-all duration-300 ease-in-out;
+  }
+
+  .button--contained {
+    @apply base-button text-slate-50;
+  }
+
+  .button--outlined {
+    @apply base-button border-2;
+  }
+
+  .button--text {
+    @apply base-button font-medium hover:bg-accentColorLight;
+  }
+
+  .button--icon {
+    @apply flex h-12 w-12 items-center justify-center rounded-md p-2 transition-all duration-300 ease-in-out hover:bg-accentColorLight;
+  }
+
+  .--contained-primary {
+    @apply bg-accentColor hover:bg-accentColorDark;
+  }
+  .--outlined-primary {
+    @apply border-accentColor text-accentColor;
+  }
+  .--text-primary,
+  .--icon-primary {
+    @apply stroke-accentColor text-accentColor;
+  }
+
+  .--contained-default {
+    @apply bg-blackBackground hover:bg-blackBackgroundLight;
+  }
+  .--outlined-default {
+    @apply border-blackBackground text-blackBackground;
+  }
+  .--text-default,
+  .--icon-default {
+    @apply stroke-slate-500 text-slate-500 hover:stroke-accentColor hover:text-accentColor dark:stroke-slate-300 dark:text-slate-300 dark:hover:text-accentColor;
+  }
 }
