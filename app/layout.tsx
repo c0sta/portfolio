@@ -20,7 +20,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       </head>
       <body
-        className={`text-slate-800 dark:bg-blackBackground dark:text-slate-50 ${inter.className}`}
+        className={`text-slate-800 transition-colors duration-300 ease-in-out dark:bg-blackBackground dark:text-slate-50 ${inter.className}`}
       >
         {children}
       </body>
