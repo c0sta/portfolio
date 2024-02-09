@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 import Image from "next/image";
-import { Button, Typography } from "@/components/ui";
+import { Button, Typography, Tags } from "@/components/ui";
 import {
   ArrowRightIcon,
   ArrowTopRightOnSquareIcon,
@@ -48,18 +48,7 @@ export const Projects = forwardRef<HTMLElement>((_, ref) => {
                 industry. Lorem Ipsum is simply dummy text of the printing and
                 typesetting industry.
               </Typography.Description>
-              <div className="mt-4 flex flex-wrap gap-2">
-                <span className="w-fit rounded-2xl bg-accentColorLight px-4 py-1 text-xs text-accentColor">
-                  React
-                </span>
-
-                <span className="w-fit rounded-2xl bg-accentColorLight px-4 py-1 text-xs text-accentColor">
-                  Node
-                </span>
-                <span className="w-fit rounded-2xl bg-accentColorLight px-4 py-1 text-xs text-accentColor">
-                  Typescript
-                </span>
-              </div>
+              <Tags labels={["React", "Node", "Typescript"]} />
             </section>
           </article>
         </div>

@@ -1,7 +1,7 @@
 "use client";
 import React, { forwardRef } from "react";
-import { Button, Typography } from "@/components/ui";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import { Button, Tags, Typography } from "@/components";
 
 export const Experiences = forwardRef<HTMLElement>((_, ref) => {
   return (
@@ -28,19 +28,7 @@ export const Experiences = forwardRef<HTMLElement>((_, ref) => {
               type and scrambled it to make a type specimen book.
             </Typography.Description>
 
-            <div className="flex gap-2">
-              <span className="w-fit rounded-2xl bg-accentColorLight px-4 py-1 text-xs text-accentColor">
-                React
-              </span>
-
-              <span className="w-fit rounded-2xl bg-accentColorLight px-4 py-1 text-xs text-accentColor">
-                Node
-              </span>
-
-              <span className="w-fit rounded-2xl bg-accentColorLight px-4 py-1 text-xs text-accentColor">
-                Typescript
-              </span>
-            </div>
+            <Tags labels={["React", "Node", "Typescript"]} />
           </div>
         </article>
         <article className="flex gap-8">
@@ -61,19 +49,7 @@ export const Experiences = forwardRef<HTMLElement>((_, ref) => {
               type and scrambled it to make a type specimen book.
             </Typography.Description>
 
-            <div className="flex gap-2">
-              <span className="w-fit rounded-2xl bg-accentColorLight px-4 py-1 text-xs text-accentColor">
-                React
-              </span>
-
-              <span className="w-fit rounded-2xl bg-accentColorLight px-4 py-1 text-xs text-accentColor">
-                Node
-              </span>
-
-              <span className="w-fit rounded-2xl bg-accentColorLight px-4 py-1 text-xs text-accentColor">
-                Typescript
-              </span>
-            </div>
+            <Tags labels={["React", "Node", "Typescript"]} />
           </div>
         </article>
       </div>
