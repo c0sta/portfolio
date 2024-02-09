@@ -1,0 +1,28 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "enableFiletypes": ["markdown", "mdx", "typescript", "typescriptreact"],
+  "ignorePaths": [
+    ".cspell.json",
+    ".github/**",
+    ".next/**",
+    ".storybook/*",
+    "assets/*.svg",
+    "stories/assets/*.png",
+    "stories/assets/*.svg",
+    "stories/assets/*.avif",
+    "cypress.config.ts",
+    "next-env.d.ts"
+  ],
+  "dictionaries": [
+    "typescript",
+    "softwareTerms",
+    "node",
+    "en_US",
+    "pt_BR",
+    "npm",
+    "misc",
+    "filetypes"
+  ],
+  "words": ["Moura", "autodocs", "Autodocs", "quimic"]
+}
