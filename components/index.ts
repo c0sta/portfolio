@@ -1,7 +1,7 @@
-export { Button, Typography, Tags } from "./ui";
-export { Sidebar } from "./Sidebar";
-export { Summary } from "./Summary";
-export { Projects } from "./Projects";
-export { Experiences } from "./Experiences";
-export { Contacts } from "./Contacts";
-export { Greetings } from "./Greetings";
+export * from "./ui";
+export { Sidebar } from "./Sidebar/Sidebar";
+export { Summary } from "./Summary/Summary";
+export { Projects } from "./Projects/Projects";
+export { Experiences } from "./Experiences/Experiences";
+export { Contacts } from "./Contacts/Contacts";
+export { Greetings } from "./Greetings/Greetings";

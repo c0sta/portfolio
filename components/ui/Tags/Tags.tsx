@@ -4,6 +4,7 @@ interface TagsProps {
   labels: string[];
 }
 export const Tags = ({ labels }: TagsProps) => {
+  if (!labels.length) return <></>;
   return (
     <div className="mt-4 flex flex-wrap gap-2">
       {labels.map((label, index) => (

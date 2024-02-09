@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Tags } from ".";
+import { Tags } from "./Tags";
 
 const meta: Meta<typeof Tags> = {
   component: Tags,

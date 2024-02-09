@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Button } from ".";
+import { Button } from "./Button";
 import Image from "next/image";
 import { GitHubIcon } from "@/assets";
 import {

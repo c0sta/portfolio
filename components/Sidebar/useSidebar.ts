@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { SidebarProps } from ".";
+import { SidebarProps } from "./Sidebar";
 
 export const useSidebar = () => {
   const summaryRef = useRef<HTMLDivElement | null>(null);
