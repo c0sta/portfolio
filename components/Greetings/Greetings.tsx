@@ -1,13 +1,16 @@
-import React from "react";
-import { GitHubIcon, LinkedInIcon } from "@/assets";
-import { Typography, Button } from "@/components/ui";
-import { useContacts } from "../Contacts/useContacts";
-import { EContacts } from "../Contacts/types";
+import React from 'react'
+import { GitHubIcon, LinkedInIcon } from '@/assets'
+import { Typography, Button } from '@/components/ui'
+import { useContacts } from '../Contacts/useContacts'
+import { EContacts } from '../Contacts/types'
 
 export const Greetings = () => {
-  const { redirectTo } = useContacts();
+  const { redirectTo } = useContacts()
   return (
-    <section className="flex h-full w-96 flex-col justify-center gap-16">
+    <section
+      data-cy="greetings"
+      className="flex h-full w-96 flex-col justify-center gap-16"
+    >
       <div className="flex flex-col gap-2">
         <Typography.Title className="leading-snug">
           Hey <button className="hover:animate-wave ">👋🏻</button>
@@ -21,7 +24,7 @@ export const Greetings = () => {
         </Typography.Description>
       </div>
 
-      <div className="flex gap-4">
+      <div className="flex gap-4" data-cy="greetings-contacts">
         <Button
           color="primary"
           variant="contained"
@@ -46,5 +49,5 @@ export const Greetings = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
