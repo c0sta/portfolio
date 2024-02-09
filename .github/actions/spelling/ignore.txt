@@ -1,6 +1,0 @@
-assets/*
-.*
-package-lock.json
-*.png
-*.png
-*.avif

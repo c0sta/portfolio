@@ -1,0 +1,14 @@
+assets/*
+.*
+package-lock.json
+
+^LICENSE
+^\.github/workflows/
+^\.github/actions/spelling/
+
+^\assets/
+
+
+\.png$
+\.svg$
+\.avif$
