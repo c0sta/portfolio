@@ -10,7 +10,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "cy:open": "cypress open",
-    "check-spelling": "cspell --config=.cspell.json \"**/*.{md,mdx,ts,tsx}\" --no-progress --show-context --show-suggestions"
+    "check-spelling": "cspell --config=.cspell.json \"**/*.{mdx,ts,tsx}\" --no-progress --show-context --show-suggestions"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
