@@ -1,21 +1,21 @@
-"use client";
-import { EnvelopeIcon, MoonIcon, SunIcon } from "@heroicons/react/24/outline";
-import { Button, Typography } from "@/components/ui";
-import { GitHubIcon, LinkedInIcon } from "@/assets";
-import { useDarkMode } from "@/hooks";
-import { useContacts } from "../Contacts/useContacts";
-import { EContacts } from "../Contacts/types";
+'use client'
+import { EnvelopeIcon, MoonIcon, SunIcon } from '@heroicons/react/24/outline'
+import { Button, Typography } from '@/components/ui'
+import { GitHubIcon, LinkedInIcon } from '@/assets'
+import { useDarkMode } from '@/hooks'
+import { useContacts } from '../Contacts/useContacts'
+import { EContacts } from '../Contacts/types'
 
 export interface SidebarProps {
   navOptions: Array<{
-    key: string;
-    label: string;
-    ref: React.MutableRefObject<HTMLElement | null>;
-  }>;
+    key: string
+    label: string
+    ref: React.MutableRefObject<HTMLElement | null>
+  }>
 }
 export const Sidebar = ({ navOptions }: SidebarProps) => {
-  const { toggleTheme, isDarkThemeActive } = useDarkMode();
-  const { redirectTo } = useContacts();
+  const { toggleTheme, isDarkThemeActive } = useDarkMode()
+  const { redirectTo } = useContacts()
 
   return (
     <section className="sticky top-0 hidden h-screen w-[30%] min-w-[300px] max-w-[300px] flex-col justify-between px-4 py-16 md:visible md:flex">
@@ -39,8 +39,8 @@ export const Sidebar = ({ navOptions }: SidebarProps) => {
               label={option.label}
               onClick={() => {
                 option.ref.current?.scrollIntoView({
-                  behavior: "smooth",
-                });
+                  behavior: 'smooth'
+                })
               }}
               variant="text"
               color="default"
@@ -95,5 +95,5 @@ export const Sidebar = ({ navOptions }: SidebarProps) => {
         </div>
       </section>
     </section>
-  );
-};
+  )
+}

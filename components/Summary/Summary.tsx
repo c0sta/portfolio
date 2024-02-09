@@ -1,6 +1,6 @@
-import { forwardRef } from "react";
-import Image from "next/image";
-import { Button, Typography } from "@/components";
+import { forwardRef } from 'react'
+import Image from 'next/image'
+import { Button, Typography } from '@/components'
 import {
   NextJSIcon,
   NodeIcon,
@@ -8,8 +8,8 @@ import {
   ReactNativeIcon,
   StorybookIcon,
   TailwindCSSIcon,
-  TypescriptIcon,
-} from "@/assets";
+  TypescriptIcon
+} from '@/assets'
 
 export const Summary = forwardRef<HTMLDivElement, {}>((_, ref) => {
   return (
@@ -46,7 +46,7 @@ export const Summary = forwardRef<HTMLDivElement, {}>((_, ref) => {
               <Image
                 src={ReactIcon}
                 className="h-10 w-10 self-center"
-                alt="GitHub icon in a white color and a purple background"
+                alt="React icon in a white color and a black background"
               />
             }
           />
@@ -58,7 +58,7 @@ export const Summary = forwardRef<HTMLDivElement, {}>((_, ref) => {
               <Image
                 src={NodeIcon}
                 className="h-10 w-10 self-center"
-                alt="GitHub icon in a white color and a purple background"
+                alt="Node icon in a white color and a black background"
               />
             }
           />
@@ -70,7 +70,7 @@ export const Summary = forwardRef<HTMLDivElement, {}>((_, ref) => {
               <Image
                 src={TypescriptIcon}
                 className="h-10 w-10 self-center"
-                alt="GitHub icon in a white color and a purple background"
+                alt="Typescript icon in a white color and a black background"
               />
             }
           />
@@ -82,7 +82,7 @@ export const Summary = forwardRef<HTMLDivElement, {}>((_, ref) => {
               <Image
                 src={NextJSIcon}
                 className="h-10 w-10 self-center"
-                alt="GitHub icon in a white color and a purple background"
+                alt="Next icon in a white color and a black background"
               />
             }
           />
@@ -94,7 +94,7 @@ export const Summary = forwardRef<HTMLDivElement, {}>((_, ref) => {
               <Image
                 src={TailwindCSSIcon}
                 className="h-10 w-10 self-center"
-                alt="GitHub icon in a white color and a purple background"
+                alt="Tailwind icon in a white color and a black background"
               />
             }
           />
@@ -106,7 +106,7 @@ export const Summary = forwardRef<HTMLDivElement, {}>((_, ref) => {
               <Image
                 src={ReactNativeIcon}
                 className="h-10 w-10 self-center"
-                alt="GitHub icon in a white color and a purple background"
+                alt="React native icon in a white color and a black background"
               />
             }
           />
@@ -118,14 +118,14 @@ export const Summary = forwardRef<HTMLDivElement, {}>((_, ref) => {
               <Image
                 src={StorybookIcon}
                 className="h-10 w-10 self-center"
-                alt="GitHub icon in a white color and a purple background"
+                alt="Storybook icon in a white color and a black background"
               />
             }
           />
         </div>
       </section>
     </div>
-  );
-});
+  )
+})
 
-Summary.displayName = "Summary";
+Summary.displayName = 'Summary'

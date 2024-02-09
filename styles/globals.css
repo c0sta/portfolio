@@ -18,7 +18,7 @@ body {
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #e5e7eb;
+  background-color: #cbd5e1;
   border-radius: 8px;
 }
 @layer components {
