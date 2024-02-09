@@ -1,13 +1,15 @@
 import React from "react";
-import Image from "next/image";
 import { GitHubIcon, LinkedInIcon } from "@/assets";
-import { Typography } from "../ui/Typography";
+import { Typography, Button } from "@/components/ui";
+import { useContacts } from "../Contacts/useContacts";
+import { EContacts } from "../Contacts/types";
 
 export const Greetings = () => {
+  const { redirectTo } = useContacts();
   return (
     <section className="flex h-full w-96 flex-col justify-center gap-16">
-      <div>
-        <Typography.Title>
+      <div className="flex flex-col gap-2">
+        <Typography.Title className="leading-snug">
           Hey <button className="hover:animate-wave ">👋🏻</button>
           <br />
           I'm Gabriel C. Moura
@@ -20,25 +22,27 @@ export const Greetings = () => {
       </div>
 
       <div className="flex gap-4">
-        <button className="flex h-11 w-11 items-center justify-center rounded-lg bg-accentColor text-white">
-          <Image
-            src={GitHubIcon}
-            alt="GitHub icon in a white color and a purple background"
-          />
-        </button>
+        <Button
+          color="primary"
+          variant="contained"
+          onClick={() => redirectTo(EContacts.GITHUB)}
+          icon={<GitHubIcon className="fill-white" />}
+        />
+        <Button
+          color="primary"
+          variant="contained"
+          onClick={() => redirectTo(EContacts.LINKEDIN)}
+          icon={<LinkedInIcon className="fill-white" />}
+        />
 
-        <button className="flex h-11 w-11 items-center justify-center rounded-lg bg-accentColor text-white">
-          <Image
-            src={LinkedInIcon}
-            alt="LinkedIn icon in a white color  and a purple background"
+        <div className="group/getInTouch relative flex items-center border-accentColor">
+          <div className="absolute z-0 h-full w-0 rounded-lg bg-accentColor transition-all duration-500 group-hover/getInTouch:w-full" />
+          <Button
+            color="primary"
+            variant="outlined"
+            label="Get in touch"
+            className="z-10 hover:text-slate-50"
           />
-        </button>
-
-        <div className="group/getInTouch relative flex items-center rounded-lg border-2 border-accentColor">
-          <div className="absolute z-0 h-full w-0 rounded-sm bg-accentColor group-hover/getInTouch:animate-progress" />
-          <button className="z-10 p-2 font-semibold text-accentColor transition-colors ease-in group-hover/getInTouch:text-slate-50 dark:group-hover/getInTouch:text-slate-50">
-            Get in touch
-          </button>
         </div>
       </div>
     </section>
