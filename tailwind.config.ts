@@ -13,8 +13,10 @@ const config: Config = {
     extend: {
       colors: {
         accentColor: "#5d5FEF",
-        // accentColorLight: "#bebff9",
-        blackBackground: "#1E1E1E",
+        accentColorLight: "rgba(93, 95, 239, 0.1)",
+        accentColorDark: "rgba(73, 75, 219, 1)",
+        blackBackground: "rgba(30, 30, 30, 1)",
+        blackBackgroundLight: "#232323",
       },
       keyframes: {
         wave: {
@@ -34,46 +36,9 @@ const config: Config = {
             transform: "rotate(0deg)",
           },
         },
-        progress: {
-          "0%": {
-            width: "0%",
-          },
-          "10%": {
-            width: "10%",
-          },
-          "20%": {
-            width: "20%",
-          },
-          "30%": {
-            width: "30%",
-          },
-          "40%": {
-            width: "40%",
-          },
-          "50%": {
-            width: "50%",
-          },
-          "60%": {
-            width: "60%",
-          },
-          "70%": {
-            width: "70%",
-          },
-          "80%": {
-            width: "80%",
-          },
-          "90%": {
-            width: "90%",
-          },
-          "100%": {
-            width: "100%",
-          },
-        },
       },
       animation: {
         wave: "wave 1s linear infinite",
-        progress: "progress .3s forwards",
-        "progress-inverse": "progress reverse .3s forwards",
       },
     },
     fontFamily: {
