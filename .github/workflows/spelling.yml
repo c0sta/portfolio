@@ -10,3 +10,9 @@ jobs:
         with:
           experimental_apply_changes_via_bot: 1
           checkout: true
+          extra_dictionaries: 
+            cspell:software-terms/dict/softwareTerms.txt
+            cspell:typescript/dict/typescript.txt
+            cspell:node/dict/node.txt
+            cspell:npm/dict/npm.txt
+            cspell:css/dict/css.txt
