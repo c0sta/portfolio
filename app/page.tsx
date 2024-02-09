@@ -1,22 +1,22 @@
-"use client";
-import { useRef } from "react";
-import { ArrowUpIcon } from "@heroicons/react/24/outline";
-import { Home } from "./home/Home";
+'use client'
+import { useRef } from 'react'
+import { ArrowUpIcon } from '@heroicons/react/24/outline'
+import { Home } from './home/Home'
 import {
   Sidebar,
   Summary,
   Projects,
   Experiences,
   Contacts,
-  Button,
-} from "@/components";
-import { useSidebar } from "@/components/Sidebar/useSidebar";
+  Button
+} from '@/components'
+import { useSidebar } from '@/components/Sidebar/useSidebar'
 
 export default function Page() {
-  const contentRef = useRef<HTMLDivElement | null>(null);
-  const homeRef = useRef<HTMLElement | null>(null);
+  const contentRef = useRef<HTMLDivElement | null>(null)
+  const homeRef = useRef<HTMLElement | null>(null)
 
-  const { navOptions, sectionsRef } = useSidebar();
+  const { navOptions, sectionsRef } = useSidebar()
 
   return (
     <main className="h-full overflow-y-auto px-20">
@@ -34,7 +34,7 @@ export default function Page() {
             <Button
               label="Back to top"
               onClick={() => {
-                homeRef.current?.scrollIntoView({ behavior: "smooth" });
+                homeRef.current?.scrollIntoView({ behavior: 'smooth' })
               }}
               variant="text"
               color="default"
@@ -45,5 +45,5 @@ export default function Page() {
         </div>
       </div>
     </main>
-  );
+  )
 }
