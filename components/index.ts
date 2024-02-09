@@ -1,4 +1,4 @@
-export * from "./ui";
+export { Button, Project, Tags, Typography } from "./ui";
 export { Sidebar } from "./Sidebar/Sidebar";
 export { Summary } from "./Summary/Summary";
 export { Projects } from "./Projects/Projects";

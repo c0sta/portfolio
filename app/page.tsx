@@ -1,7 +1,7 @@
 "use client";
 import { useRef } from "react";
 import { ArrowUpIcon } from "@heroicons/react/24/outline";
-import { Home } from "./home";
+import { Home } from "./home/Home";
 import {
   Sidebar,
   Summary,
