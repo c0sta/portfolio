@@ -11,7 +11,8 @@
     "stories/assets/*.png",
     "stories/assets/*.svg",
     "stories/assets/*.avif",
-    "cypress.config.ts"
+    "cypress.config.ts",
+    "next-env.d.ts"
   ],
   "dictionaries": [
     "typescript",
