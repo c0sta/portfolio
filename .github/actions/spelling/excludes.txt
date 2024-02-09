@@ -1,6 +1,0 @@
-^LICENSE
-^\.github/workflows/
-^\.github/actions/spelling/
-\.png$
-\.svg$
-\.avif$

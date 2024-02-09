@@ -2,20 +2,14 @@ name: Spell checking
 on: [pull_request_target, push, issue_comment]
 
 jobs:
-  build:
-    name: Spell checking
+  spellchecking:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
-      - uses: check-spelling/check-spelling@prerelease
+      - uses: actions/checkout@v2
+        name: Check out the code
+      - uses: actions/setup-node@v1
+        name: Run spell check
         with:
-          experimental_apply_changes_via_bot: 1
-          checkout: true
-          extra_dictionaries: 
-            cspell:software-terms/dict/softwareTerms.txt
-            cspell:typescript/dict/typescript.txt
-            cspell:node/dict/node.txt
-            cspell:npm/dict/npm.txt
-            cspell:css/dict/css.txt
-            cspell:html/dict/html.txt
+          node-version: '12'
+      - run: npm install -g cspell
+      - run: npm run check-spelling
