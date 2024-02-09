@@ -18,7 +18,10 @@ export const Sidebar = ({ navOptions }: SidebarProps) => {
   const { redirectTo } = useContacts()
 
   return (
-    <section className="sticky top-0 hidden h-screen w-[30%] min-w-[300px] max-w-[300px] flex-col justify-between px-4 py-16 md:visible md:flex">
+    <section
+      data-cy="sidebar"
+      className="sticky top-0 hidden h-screen w-[30%] min-w-[300px] max-w-[300px] flex-col justify-between px-4 py-16 md:visible md:flex"
+    >
       <div className="flex flex-col gap-16">
         <header>
           <Typography.Subtitle>Gabriel C. Moura</Typography.Subtitle>
@@ -50,7 +53,10 @@ export const Sidebar = ({ navOptions }: SidebarProps) => {
         </nav>
       </div>
 
-      <section className="flex flex-wrap items-center justify-between">
+      <section
+        data-cy="sidebar-contacts"
+        className="flex flex-wrap items-center justify-between"
+      >
         <Button
           icon={
             isDarkThemeActive ? (
