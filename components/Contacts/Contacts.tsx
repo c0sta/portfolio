@@ -1,16 +1,16 @@
-import React, { forwardRef } from "react";
-import { EnvelopeIcon } from "@heroicons/react/24/outline";
-import { Button, Typography } from "@/components/ui";
-import { GitHubIcon, LinkedInIcon } from "@/assets";
-import { useContacts } from "./useContacts";
-import { EContacts } from "./types";
+import React, { forwardRef } from 'react'
+import { EnvelopeIcon } from '@heroicons/react/24/outline'
+import { Button, Typography } from '@/components/ui'
+import { GitHubIcon, LinkedInIcon } from '@/assets'
+import { useContacts } from './useContacts'
+import { EContacts } from './types'
 
 export const Contacts = forwardRef<HTMLElement>((_, ref) => {
-  const { redirectTo } = useContacts();
+  const { redirectTo } = useContacts()
   return (
     <section ref={ref} className="flex flex-col gap-6">
       <Typography.Subtitle className="text-xl uppercase">
-        Let's connect
+        {"Let's connect"}
       </Typography.Subtitle>
       <div className="flex items-center gap-2">
         <article className="w-8/12 text-xs">
@@ -41,7 +41,7 @@ export const Contacts = forwardRef<HTMLElement>((_, ref) => {
         </div>
       </div>
     </section>
-  );
-});
+  )
+})
 
-Contacts.displayName = "Contacts";
+Contacts.displayName = 'Contacts'

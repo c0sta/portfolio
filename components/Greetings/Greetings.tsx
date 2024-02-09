@@ -15,7 +15,7 @@ export const Greetings = () => {
         <Typography.Title className="leading-snug">
           Hey <button className="hover:animate-wave ">👋🏻</button>
           <br />
-          I'm Gabriel C. Moura
+          {"I'm Gabriel C. Moura"}
         </Typography.Title>
         <Typography.Title color="primary">Front-end Engineer</Typography.Title>
         <Typography.Description>

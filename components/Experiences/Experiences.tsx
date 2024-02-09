@@ -1,7 +1,7 @@
-"use client";
-import React, { forwardRef } from "react";
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
-import { Button, Tags, Typography } from "@/components";
+'use client'
+import React, { forwardRef } from 'react'
+import { ArrowRightIcon } from '@heroicons/react/24/outline'
+import { Button, Tags, Typography } from '@/components'
 
 export const Experiences = forwardRef<HTMLElement>((_, ref) => {
   return (
@@ -23,12 +23,12 @@ export const Experiences = forwardRef<HTMLElement>((_, ref) => {
             </div>
             <Typography.Description>
               Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
+              industry. Lorem Ipsum has been the industry standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it to make a type specimen book.
             </Typography.Description>
 
-            <Tags labels={["React", "Node", "Typescript"]} />
+            <Tags labels={['React', 'Node', 'Typescript']} />
           </div>
         </article>
         <article className="flex gap-8">
@@ -44,12 +44,12 @@ export const Experiences = forwardRef<HTMLElement>((_, ref) => {
             </div>
             <Typography.Description>
               Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
+              industry. Lorem Ipsum has been the industry standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it to make a type specimen book.
             </Typography.Description>
 
-            <Tags labels={["React", "Node", "Typescript"]} />
+            <Tags labels={['React', 'Node', 'Typescript']} />
           </div>
         </article>
       </div>
@@ -67,7 +67,7 @@ export const Experiences = forwardRef<HTMLElement>((_, ref) => {
         }
       />
     </section>
-  );
-});
+  )
+})
 
-Experiences.displayName = "Experiences";
+Experiences.displayName = 'Experiences'
