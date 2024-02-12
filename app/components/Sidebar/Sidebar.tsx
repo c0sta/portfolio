@@ -1,21 +1,18 @@
 'use client'
 import { EnvelopeIcon, MoonIcon, SunIcon } from '@heroicons/react/24/outline'
-import { Button, Typography } from '@/components/ui'
+import { Button, Typography } from '@/app/components/ui'
 import { GitHubIcon, LinkedInIcon } from '@/assets'
 import { useDarkMode } from '@/hooks'
-import { useContacts } from '../Contacts/useContacts'
-import { EContacts } from '../Contacts/types'
+import { ButtonClient } from '../ui/Button/ButtonClient'
 
 export interface SidebarProps {
   navOptions: Array<{
     key: string
     label: string
-    ref: React.MutableRefObject<HTMLElement | null>
   }>
 }
 export const Sidebar = ({ navOptions }: SidebarProps) => {
   const { toggleTheme, isDarkThemeActive } = useDarkMode()
-  const { redirectTo } = useContacts()
 
   return (
     <section
@@ -40,11 +37,8 @@ export const Sidebar = ({ navOptions }: SidebarProps) => {
             <Button
               key={option.key}
               label={option.label}
-              onClick={() => {
-                option.ref.current?.scrollIntoView({
-                  behavior: 'smooth'
-                })
-              }}
+              isLink
+              href={`#${option.key}`}
               variant="text"
               color="default"
               className="w-full"
@@ -57,7 +51,7 @@ export const Sidebar = ({ navOptions }: SidebarProps) => {
         data-cy="sidebar-contacts"
         className="flex flex-wrap items-center justify-between"
       >
-        <Button
+        <ButtonClient
           icon={
             isDarkThemeActive ? (
               <SunIcon className="h-6 w-6 stroke-slate-500 group-hover/button:stroke-accentColor" />
@@ -72,7 +66,7 @@ export const Sidebar = ({ navOptions }: SidebarProps) => {
         />
 
         <div className="flex flex-wrap gap-2">
-          <Button
+          <ButtonClient
             variant="icon"
             color="default"
             className="h-11 w-11"
@@ -84,7 +78,9 @@ export const Sidebar = ({ navOptions }: SidebarProps) => {
             variant="icon"
             color="default"
             className="h-11 w-11"
-            onClick={() => redirectTo(EContacts.GITHUB)}
+            isLink
+            href={process.env.NEXT_PUBLIC_GITHUB_PROFILE ?? ''}
+            target="_blank"
             icon={
               <GitHubIcon className="fill-slate-500 stroke-transparent group-hover/button:fill-accentColor" />
             }
@@ -93,7 +89,9 @@ export const Sidebar = ({ navOptions }: SidebarProps) => {
             variant="icon"
             color="default"
             className="h-11 w-11"
-            onClick={() => redirectTo(EContacts.LINKEDIN)}
+            isLink
+            href={process.env.NEXT_PUBLIC_LINKEDIN_PROFILE ?? ''}
+            target="_blank"
             icon={
               <LinkedInIcon className="fill-slate-500 stroke-transparent group-hover/button:fill-accentColor" />
             }

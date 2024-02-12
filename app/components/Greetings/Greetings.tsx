@@ -1,11 +1,9 @@
 import React from 'react'
 import { GitHubIcon, LinkedInIcon } from '@/assets'
-import { Typography, Button } from '@/components/ui'
-import { useContacts } from '../Contacts/useContacts'
-import { EContacts } from '../Contacts/types'
+import { Typography, Button } from '@/app/components/ui'
+import { ButtonClient } from '../ui/Button/ButtonClient'
 
 export const Greetings = () => {
-  const { redirectTo } = useContacts()
   return (
     <section
       data-cy="greetings"
@@ -28,19 +26,23 @@ export const Greetings = () => {
         <Button
           color="primary"
           variant="contained"
-          onClick={() => redirectTo(EContacts.GITHUB)}
+          isLink
+          href={process.env.NEXT_PUBLIC_GITHUB_PROFILE ?? ''}
+          target="_blank"
           icon={<GitHubIcon className="fill-white" />}
         />
         <Button
           color="primary"
           variant="contained"
-          onClick={() => redirectTo(EContacts.LINKEDIN)}
+          isLink
+          href={process.env.NEXT_PUBLIC_LINKEDIN_PROFILE ?? ''}
+          target="_blank"
           icon={<LinkedInIcon className="fill-white" />}
         />
 
         <div className="group/getInTouch relative flex items-center border-accentColor">
           <div className="absolute z-0 h-full w-0 rounded-lg bg-accentColor transition-all duration-500 group-hover/getInTouch:w-full" />
-          <Button
+          <ButtonClient
             color="primary"
             variant="outlined"
             label="Get in touch"

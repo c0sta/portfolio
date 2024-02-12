@@ -1,38 +1,38 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { Button } from "./Button";
-import Image from "next/image";
-import { GitHubIcon } from "@/assets";
+import type { Meta, StoryObj } from '@storybook/react'
+import { Button } from './Button'
+import { GitHubIcon } from '@/assets'
 import {
   ArrowRightIcon,
   ListBulletIcon,
-  Squares2X2Icon,
-} from "@heroicons/react/24/outline";
+  Squares2X2Icon
+} from '@heroicons/react/24/outline'
+import { ButtonClient } from './ButtonClient'
 
 const meta: Meta<typeof Button> = {
   component: Button,
-  tags: ["autodocs"],
-  title: "UI Components/Button",
-};
-type Story = StoryObj<typeof Button>;
+  tags: ['autodocs'],
+  title: 'UI Components/Button'
+}
+type Story = StoryObj<typeof Button>
 
 export const Contained: Story = {
   args: {
-    variant: "contained",
-    color: "primary",
-    label: "Get in touch",
+    variant: 'contained',
+    color: 'primary',
+    label: 'Get in touch'
   },
-  render: (args) => <Button {...args} />,
-};
+  render: (args) => <ButtonClient {...args} />
+}
 
 export const Icon: Story = {
   render: () => (
     <div className="flex gap-3">
-      <Button
+      <ButtonClient
         variant="contained"
         color="primary"
         icon={<GitHubIcon className="h-7 w-7 self-center fill-white" />}
       />
-      <Button
+      <ButtonClient
         label="View my resume"
         variant="contained"
         color="default"
@@ -40,7 +40,7 @@ export const Icon: Story = {
           <ArrowRightIcon className="h-5 w-5 stroke-slate-50" stroke="black" />
         }
       />
-      <Button
+      <ButtonClient
         label="View my resume"
         variant="text"
         color="default"
@@ -51,14 +51,14 @@ export const Icon: Story = {
           />
         }
       />
-      <Button
+      <ButtonClient
         variant="icon"
         color="default"
         icon={
           <Squares2X2Icon className="h-5 w-5 stroke-slate-500 group-hover/button:stroke-accentColor" />
         }
       />
-      <Button
+      <ButtonClient
         variant="icon"
         color="default"
         icon={
@@ -66,25 +66,25 @@ export const Icon: Story = {
         }
       />
     </div>
-  ),
-};
+  )
+}
 
 export const Outlined: Story = {
   args: {
-    variant: "outlined",
-    color: "primary",
-    label: "Get in touch",
+    variant: 'outlined',
+    color: 'primary',
+    label: 'Get in touch'
   },
-  render: (args) => <Button {...args} />,
-};
+  render: (args) => <ButtonClient {...args} />
+}
 
 export const Text: Story = {
   args: {
-    variant: "text",
-    color: "primary",
-    label: "Get in touch",
+    variant: 'text',
+    color: 'primary',
+    label: 'Get in touch'
   },
-  render: (args) => <Button {...args} />,
-};
+  render: (args) => <ButtonClient {...args} />
+}
 
-export default meta;
+export default meta

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Experiences } from './Experiences'
+import Experiences from './Experiences'
 
 describe('<Experiences />', () => {
   it('renders', () => {

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { getStyles } from './constants'
 import { ButtonProps } from './types'
 
@@ -7,15 +8,17 @@ export const Button = ({
   icon,
   label,
   className = '',
-  ...rest
+  href = '',
+  target = ''
 }: ButtonProps) => {
   return (
-    <button
+    <Link
       className={`group/button ${getStyles(variant).variant[variant]} ${getStyles(variant).color[color]} ${className}`}
-      onClick={rest.onClick}
+      href={href}
+      target={target}
     >
       {label}
       {icon}
-    </button>
+    </Link>
   )
 }

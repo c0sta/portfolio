@@ -2,7 +2,7 @@ import React from 'react'
 import { Project } from './Project'
 
 describe('<Project />', () => {
-  it('renders', () => {
+  it('renders', async () => {
     // see: https://on.cypress.io/mounting-react
     cy.mount(
       <Project

@@ -1,9 +1,9 @@
 import React from 'react'
-import { Contacts } from './Contacts'
+import { Greetings } from './Greetings'
 
-describe('<Contacts />', () => {
+describe('<Greetings />', () => {
   it('renders', () => {
     // see: https://on.cypress.io/mounting-react
-    cy.mount(<Contacts />)
+    cy.mount(<Greetings />)
   })
 })

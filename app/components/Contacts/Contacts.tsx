@@ -1,14 +1,12 @@
-import React, { forwardRef } from 'react'
+import React from 'react'
 import { EnvelopeIcon } from '@heroicons/react/24/outline'
-import { Button, Typography } from '@/components/ui'
+import { Button, Typography } from '@/app/components/ui'
 import { GitHubIcon, LinkedInIcon } from '@/assets'
-import { useContacts } from './useContacts'
-import { EContacts } from './types'
+import { ButtonClient } from '../ui/Button/ButtonClient'
 
-export const Contacts = forwardRef<HTMLElement>((_, ref) => {
-  const { redirectTo } = useContacts()
+export default function Contacts() {
   return (
-    <section ref={ref} className="flex flex-col gap-6">
+    <section id="contacts" className="flex flex-col gap-6">
       <Typography.Subtitle className="text-xl uppercase">
         {"Let's connect"}
       </Typography.Subtitle>
@@ -18,30 +16,32 @@ export const Contacts = forwardRef<HTMLElement>((_, ref) => {
           industry.
         </article>
         <div className="flex flex-wrap gap-2">
-          <Button
+          <ButtonClient
             variant="contained"
             color="default"
             className="h-11 w-11"
-            icon={<EnvelopeIcon className="h-10 w-10 self-center" />}
+            icon={<EnvelopeIcon className="self-center" />}
           />
           <Button
-            onClick={() => redirectTo(EContacts.GITHUB)}
+            isLink
+            href={process.env.NEXT_PUBLIC_GITHUB_PROFILE ?? ''}
+            target="_blank"
             variant="contained"
             color="default"
             className="h-11 w-11"
-            icon={<GitHubIcon className="h-7 w-7 self-center fill-white" />}
+            icon={<GitHubIcon className="self-center fill-white" />}
           />
           <Button
-            onClick={() => redirectTo(EContacts.LINKEDIN)}
+            isLink
+            href={process.env.NEXT_PUBLIC_LINKEDIN_PROFILE ?? ''}
+            target="_blank"
             variant="contained"
             color="default"
             className="h-11 w-11"
-            icon={<LinkedInIcon className="h-10 w-10 self-center fill-white" />}
+            icon={<LinkedInIcon className="self-center fill-white" />}
           />
         </div>
       </div>
     </section>
   )
-})
-
-Contacts.displayName = 'Contacts'
+}
