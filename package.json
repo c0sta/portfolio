@@ -10,12 +10,14 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "cy:open": "cypress open",
+    "cy:run": "cypress run",
     "check-spelling": "cspell --config=.cspell.json \"**/*.{mdx,ts,tsx}\" --show-suggestions"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",
     "cspell": "^8.3.2",
+    "dotenv": "^16.4.2",
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18"
