@@ -9,8 +9,8 @@
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "cy:open": "cypress open",
-    "cy:run": "cypress run",
+    "cy:open": "cypress open --e2e",
+    "cy:run": "cypress run --e2e",
     "check-spelling": "cspell --config=.cspell.json \"**/*.{mdx,ts,tsx}\" --show-suggestions"
   },
   "dependencies": {
@@ -19,8 +19,8 @@
     "cspell": "^8.3.2",
     "dotenv": "^16.4.2",
     "next": "14.0.3",
-    "react": "^18",
-    "react-dom": "^18"
+    "react": "^18.2",
+    "react-dom": "^18.2"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.6.12",
