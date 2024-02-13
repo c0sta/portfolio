@@ -1,19 +1,13 @@
 import Image from 'next/image'
 import { Typography } from '@/app/components'
-import {
-  NextJSIcon,
-  NodeIcon,
-  ReactIcon,
-  ReactNativeIcon,
-  StorybookIcon,
-  TailwindCSSIcon,
-  TypescriptIcon
-} from '@/assets'
 import { ButtonClient } from '../ui/Button/ButtonClient'
-import { getSummary } from '@/app/lib/getSummaries'
+import { getSummaries } from '@/app/lib/getSummaries'
+import { getSkills } from '@/app/lib/getSkills'
 
 export default async function Summary() {
-  const { summary } = await getSummary()
+  const { summary } = await getSummaries()
+  const { skills } = await getSkills()
+
   return (
     <div id="summary" className="flex flex-col gap-6 lg:flex-row">
       <article className="w-full lg:w-8/12">
@@ -32,90 +26,23 @@ export default async function Summary() {
         <br />
 
         <div className="flex flex-wrap gap-4">
-          <ButtonClient
-            color="default"
-            variant="contained"
-            className="h-11 w-11"
-            icon={
-              <Image
-                src={ReactIcon}
-                className="h-10 w-10 self-center"
-                alt="React icon in a white color and a black background"
-              />
-            }
-          />
-          <ButtonClient
-            color="default"
-            variant="contained"
-            className="h-11 w-11"
-            icon={
-              <Image
-                src={NodeIcon}
-                className="h-10 w-10 self-center"
-                alt="Node icon in a white color and a black background"
-              />
-            }
-          />
-          <ButtonClient
-            color="default"
-            variant="contained"
-            className="h-11 w-11"
-            icon={
-              <Image
-                src={TypescriptIcon}
-                className="h-10 w-10 self-center"
-                alt="Typescript icon in a white color and a black background"
-              />
-            }
-          />
-          <ButtonClient
-            color="default"
-            variant="contained"
-            className="h-11 w-11"
-            icon={
-              <Image
-                src={NextJSIcon}
-                className="h-10 w-10 self-center"
-                alt="Next icon in a white color and a black background"
-              />
-            }
-          />
-          <ButtonClient
-            color="default"
-            variant="contained"
-            className="h-11 w-11"
-            icon={
-              <Image
-                src={TailwindCSSIcon}
-                className="h-10 w-10 self-center"
-                alt="Tailwind icon in a white color and a black background"
-              />
-            }
-          />
-          <ButtonClient
-            color="default"
-            variant="contained"
-            className="h-11 w-11"
-            icon={
-              <Image
-                src={ReactNativeIcon}
-                className="h-10 w-10 self-center"
-                alt="React native icon in a white color and a black background"
-              />
-            }
-          />
-          <ButtonClient
-            color="default"
-            variant="contained"
-            className="h-11 w-11"
-            icon={
-              <Image
-                src={StorybookIcon}
-                className="h-10 w-10 self-center"
-                alt="Storybook icon in a white color and a black background"
-              />
-            }
-          />
+          {skills.data.map((skill) => (
+            <ButtonClient
+              key={skill.id}
+              color="default"
+              variant="contained"
+              className="h-11 w-11"
+              icon={
+                <Image
+                  src={`${process.env.NEXT_PUBLIC_API_URL}${skill.attributes.icon.data.attributes.url}`}
+                  className="h-10 w-10 self-center"
+                  width={16}
+                  height={16}
+                  alt={`${skill.attributes.name} icon in a white color and a black background`}
+                />
+              }
+            />
+          ))}
         </div>
       </section>
     </div>
