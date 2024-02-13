@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 import {
   ArrowTopRightOnSquareIcon,
   CodeBracketIcon
@@ -26,11 +25,7 @@ export function Project({
   seeLiveUrl
 }: ProjectProps) {
   return (
-    <Link
-      href={seeLiveUrl}
-      target="_blank"
-      className="flex w-4/12 min-w-[230px] max-w-[460px] flex-col rounded-lg bg-slate-50 transition-all duration-300 ease-in-out hover:translate-y-1 hover:scale-105 hover:cursor-pointer hover:bg-slate-100 hover:shadow-sm dark:bg-blackBackgroundLight dark:hover:bg-blackBackgroundLight"
-    >
+    <section className="flex w-4/12 min-w-[230px] max-w-[460px] flex-col rounded-lg bg-slate-50 transition-all duration-300 ease-in-out hover:translate-y-1 hover:scale-105 hover:cursor-pointer hover:bg-slate-100 hover:shadow-sm dark:bg-blackBackgroundLight dark:hover:bg-blackBackgroundLight">
       {!!imageSrc.length && (
         <Image
           src={imageSrc}
@@ -68,6 +63,6 @@ export function Project({
         </Typography.Description>
         <Tags labels={skills} />
       </section>
-    </Link>
+    </section>
   )
 }
