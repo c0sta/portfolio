@@ -1,4 +1,4 @@
-export const getSummary = async () => {
+export const getSummaries = async () => {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/api/summaries?populate=*`,
     {
@@ -12,22 +12,17 @@ export const getSummary = async () => {
   if (!res.ok) throw new Error('Error on summaries fetch')
 
   return {
-    summary: ((await res.json()) ?? {
-      id: 0,
-      data: [
-        {
-          attributes: { about: '', skills: [] }
-        }
-      ]
-    }) as {
-      data: Array<{
-        id: number
-        attributes: {
-          about: string
-          skills: SkillsResponse
-        }
-      }>
-    }
+    summary: (await res.json()) as SummaryResponse
+  }
+
+  interface SummaryResponse {
+    data: Array<{
+      id: number
+      attributes: {
+        about: string
+        skills: SkillsResponse
+      }
+    }>
   }
 }
 

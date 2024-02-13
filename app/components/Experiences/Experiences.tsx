@@ -13,21 +13,25 @@ export default async function Experiences() {
         Experiences
       </Typography.Subtitle>
       <div className="flex flex-col gap-10">
-        {experiences.data.map(
-          ({ id, attributes: { title, description, skills, start, end } }) => (
-            <Experience
-              key={id}
-              title={title}
-              description={description}
-              skills={skills.data.map((skill) => skill.attributes.name)}
-              startDate={start}
-              endDate={end}
-            />
-          )
-        )}
+        {experiences.data
+          .sort((a, b) => a.id - b.id)
+          .map(
+            ({
+              id,
+              attributes: { title, description, skills, start, end }
+            }) => (
+              <Experience
+                key={id}
+                title={title}
+                description={description}
+                skills={skills.data.map((skill) => skill.attributes.name)}
+                startDate={start}
+                endDate={end}
+              />
+            )
+          )}
       </div>
       <Button
-        isLink
         href={process.env.NEXT_PUBLIC_RESUME_DOWNLOAD ?? ''}
         target="_blank"
         label="View full resume"
