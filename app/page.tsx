@@ -24,7 +24,6 @@ export default function Page() {
 
         <div className="flex h-[10vh] items-center">
           <Button
-            isLink
             href="#summary"
             color="primary"
             variant="icon"
@@ -56,7 +55,6 @@ export default function Page() {
           <div className="flex w-full justify-center">
             <Button
               label="Back to top"
-              isLink
               href="#home"
               variant="text"
               color="default"

@@ -46,7 +46,6 @@ export function Project({
           <strong>{title}</strong>
           <div className="flex gap-1">
             <Button
-              isLink
               target="_blank"
               href={seeCodeUrl}
               variant="icon"
@@ -55,7 +54,6 @@ export function Project({
               icon={<CodeBracketIcon className="h-4 w-4" />}
             />
             <Button
-              isLink
               target="_blank"
               href={seeLiveUrl}
               variant="icon"
