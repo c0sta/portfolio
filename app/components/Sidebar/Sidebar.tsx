@@ -2,9 +2,9 @@
 import { EnvelopeIcon, MoonIcon, SunIcon } from '@heroicons/react/24/outline'
 import { Button, Typography } from '@/app/components/ui'
 import { GitHubIcon, LinkedInIcon } from '@/assets'
-import { useDarkMode } from '@/hooks'
-import { ButtonClient } from '../ui/Button/ButtonClient'
-import { useMail } from '../Greetings/useMail'
+import { useDarkMode } from '@/app/hooks'
+import { ButtonClient } from '@/app/components/ui/Button/ButtonClient'
+import { useMail } from '@/app/components/Greetings/useMail'
 
 export interface SidebarProps {
   navOptions: Array<{
