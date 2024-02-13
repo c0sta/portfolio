@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Button } from './Button'
-import { GitHubIcon } from '@/assets'
+import { GitHubIcon } from '@/app/assets'
 import {
   ArrowRightIcon,
   ListBulletIcon,

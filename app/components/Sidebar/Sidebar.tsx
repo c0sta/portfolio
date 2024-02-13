@@ -1,7 +1,7 @@
 'use client'
 import { EnvelopeIcon, MoonIcon, SunIcon } from '@heroicons/react/24/outline'
 import { Button, Typography } from '@/app/components/ui'
-import { GitHubIcon, LinkedInIcon } from '@/assets'
+import { GitHubIcon, LinkedInIcon } from '@/app/assets'
 import { useDarkMode } from '@/app/hooks'
 import { ButtonClient } from '@/app/components/ui/Button/ButtonClient'
 import { useMail } from '@/app/components/Greetings/useMail'

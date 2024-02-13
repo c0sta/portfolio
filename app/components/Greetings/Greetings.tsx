@@ -1,5 +1,5 @@
 import React from 'react'
-import { GitHubIcon, LinkedInIcon } from '@/assets'
+import { GitHubIcon, LinkedInIcon } from '@/app/assets'
 import { Typography, Button } from '@/app/components/ui'
 import { useMail } from './useMail'
 

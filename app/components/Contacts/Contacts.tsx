@@ -1,7 +1,7 @@
 import React from 'react'
 import { EnvelopeIcon } from '@heroicons/react/24/outline'
 import { Button, Typography } from '@/app/components/ui'
-import { GitHubIcon, LinkedInIcon } from '@/assets'
+import { GitHubIcon, LinkedInIcon } from '@/app/assets'
 import { useMail } from '../Greetings/useMail'
 
 export default function Contacts() {
