@@ -2,9 +2,10 @@ import React from 'react'
 import { EnvelopeIcon } from '@heroicons/react/24/outline'
 import { Button, Typography } from '@/app/components/ui'
 import { GitHubIcon, LinkedInIcon } from '@/assets'
-import { ButtonClient } from '../ui/Button/ButtonClient'
+import { useMail } from '../Greetings/useMail'
 
 export default function Contacts() {
+  const { emailMeHref } = useMail()
   return (
     <section id="contacts" className="flex flex-col gap-6">
       <Typography.Subtitle className="text-xl uppercase">
@@ -16,14 +17,14 @@ export default function Contacts() {
           industry.
         </article>
         <div className="flex flex-wrap gap-2">
-          <ButtonClient
+          <Button
+            href={emailMeHref}
             variant="contained"
             color="default"
             className="h-11 w-11"
             icon={<EnvelopeIcon className="self-center" />}
           />
           <Button
-            isLink
             href={process.env.NEXT_PUBLIC_GITHUB_PROFILE ?? ''}
             target="_blank"
             variant="contained"
@@ -32,7 +33,6 @@ export default function Contacts() {
             icon={<GitHubIcon className="self-center fill-white" />}
           />
           <Button
-            isLink
             href={process.env.NEXT_PUBLIC_LINKEDIN_PROFILE ?? ''}
             target="_blank"
             variant="contained"

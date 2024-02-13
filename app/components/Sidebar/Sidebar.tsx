@@ -4,6 +4,7 @@ import { Button, Typography } from '@/app/components/ui'
 import { GitHubIcon, LinkedInIcon } from '@/assets'
 import { useDarkMode } from '@/hooks'
 import { ButtonClient } from '../ui/Button/ButtonClient'
+import { useMail } from '../Greetings/useMail'
 
 export interface SidebarProps {
   navOptions: Array<{
@@ -13,6 +14,7 @@ export interface SidebarProps {
 }
 export const Sidebar = ({ navOptions }: SidebarProps) => {
   const { toggleTheme, isDarkThemeActive } = useDarkMode()
+  const { emailMeHref } = useMail()
 
   return (
     <section
@@ -25,19 +27,13 @@ export const Sidebar = ({ navOptions }: SidebarProps) => {
           <Typography.Subtitle color="primary">
             Front-end Engineer
           </Typography.Subtitle>
-          <br />
-          <Typography.Description className="text-justify">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
-          </Typography.Description>
         </header>
 
-        <nav className="flex flex-col gap-2">
+        <nav className="mt-6 flex flex-col gap-2">
           {navOptions.map((option) => (
             <Button
               key={option.key}
               label={option.label}
-              isLink
               href={`#${option.key}`}
               variant="text"
               color="default"
@@ -66,10 +62,11 @@ export const Sidebar = ({ navOptions }: SidebarProps) => {
         />
 
         <div className="flex flex-wrap gap-2">
-          <ButtonClient
+          <Button
             variant="icon"
             color="default"
             className="h-11 w-11"
+            href={emailMeHref}
             icon={
               <EnvelopeIcon className="fill-slate-500  stroke-white duration-200 group-hover/button:fill-accentColor dark:stroke-blackBackground" />
             }
@@ -78,7 +75,6 @@ export const Sidebar = ({ navOptions }: SidebarProps) => {
             variant="icon"
             color="default"
             className="h-11 w-11"
-            isLink
             href={process.env.NEXT_PUBLIC_GITHUB_PROFILE ?? ''}
             target="_blank"
             icon={
@@ -89,7 +85,6 @@ export const Sidebar = ({ navOptions }: SidebarProps) => {
             variant="icon"
             color="default"
             className="h-11 w-11"
-            isLink
             href={process.env.NEXT_PUBLIC_LINKEDIN_PROFILE ?? ''}
             target="_blank"
             icon={
