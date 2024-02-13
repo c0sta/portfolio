@@ -10,7 +10,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "cy:open": "cypress open --e2e",
-    "cy:run": "cypress run --e2e",
+    "cy:run": "cypress run --e2e && cypress run --component",
     "check-spelling": "cspell --config=.cspell.json \"**/*.{mdx,ts,tsx}\" --show-suggestions",
     "validate": "npm run build && npm run start & npm run cy:run && npm run check-spelling",
     "prepare": "husky"
