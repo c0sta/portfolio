@@ -15,6 +15,7 @@ export const Button = ({
     <Link
       className={`group/button ${getStyles(variant).variant[variant]} ${getStyles(variant).color[color]} ${className}`}
       href={href}
+      prefetch={false}
       target={target}
     >
       {label}
