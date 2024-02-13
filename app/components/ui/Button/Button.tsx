@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { getStyles } from './constants'
 import { ButtonProps } from './types'
 
@@ -12,14 +11,13 @@ export const Button = ({
   target = ''
 }: ButtonProps) => {
   return (
-    <Link
+    <a
       className={`group/button ${getStyles(variant).variant[variant]} ${getStyles(variant).color[color]} ${className}`}
       href={href}
-      prefetch={false}
       target={target}
     >
       {label}
       {icon}
-    </Link>
+    </a>
   )
 }
