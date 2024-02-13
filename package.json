@@ -12,7 +12,7 @@
     "cy:open": "cypress open --e2e",
     "cy:run": "cypress run --e2e",
     "check-spelling": "cspell --config=.cspell.json \"**/*.{mdx,ts,tsx}\" --show-suggestions",
-    "validate": "npm run cy:run && npm run check-spelling"
+    "validate": "npm run build && npm run cy:run && npm run check-spelling"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
