@@ -1,3 +1,3 @@
-import { useDarkMode } from "./useDarkMode";
+import { useDarkMode } from './useDarkMode'
 
-export { useDarkMode };
+export { useDarkMode }

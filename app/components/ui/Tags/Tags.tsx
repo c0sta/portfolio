@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react'
 
 interface TagsProps {
-  labels: string[];
+  labels: string[]
 }
 export const Tags = ({ labels }: TagsProps) => {
-  if (!labels.length) return <></>;
+  if (!labels.length) return <></>
   return (
     <div className="mt-4 flex flex-wrap gap-2">
       {labels.map((label, index) => (
@@ -16,5 +16,5 @@ export const Tags = ({ labels }: TagsProps) => {
         </span>
       ))}
     </div>
-  );
-};
+  )
+}

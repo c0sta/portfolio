@@ -1,6 +1,6 @@
 import React from 'react'
 import { ArrowRightIcon } from '@heroicons/react/24/outline'
-import { Button, Tags, Typography } from '@/app/components'
+import { Button, Typography } from '@/app/components'
 import { getExperiences } from '@/app/lib/getExperiences'
 import { Experience } from '../ui/Experience/Experience'
 
@@ -9,9 +9,7 @@ export default async function Experiences() {
 
   return (
     <section id="experiences" className="flex flex-col gap-6 ">
-      <Typography.Subtitle className="text-xl uppercase">
-        Experiences
-      </Typography.Subtitle>
+      <Typography.Subtitle className="text-xl">Experiences</Typography.Subtitle>
       <div className="flex flex-col gap-10">
         {experiences.data
           .sort((a, b) => a.id - b.id)

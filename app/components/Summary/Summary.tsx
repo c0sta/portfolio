@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Typography } from '@/app/components'
-import { ButtonClient } from '../ui/Button/ButtonClient'
+import { ButtonClient } from '@/app/components/ui/Button/ButtonClient'
 import { getSummaries } from '@/app/lib/getSummaries'
 import { getSkills } from '@/app/lib/getSkills'
 
@@ -11,18 +11,14 @@ export default async function Summary() {
   return (
     <div id="summary" className="flex flex-col gap-6 lg:flex-row">
       <article className="w-full lg:w-8/12">
-        <Typography.Subtitle className="text-xl uppercase">
-          About me
-        </Typography.Subtitle>
+        <Typography.Subtitle className="text-xl">About me</Typography.Subtitle>
         <br />
         <Typography.Description>
           {summary.data[0].attributes.about}
         </Typography.Description>
       </article>
       <section className="w-full lg:w-4/12">
-        <Typography.Subtitle className="text-xl uppercase">
-          Skills
-        </Typography.Subtitle>
+        <Typography.Subtitle className="text-xl">Skills</Typography.Subtitle>
         <br />
 
         <div className="flex flex-wrap gap-4">

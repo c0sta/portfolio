@@ -8,13 +8,15 @@ export default function Contacts() {
   const { emailMeHref } = useMail()
   return (
     <section id="contacts" className="flex flex-col gap-6">
-      <Typography.Subtitle className="text-xl uppercase">
+      <Typography.Subtitle className="text-xl ">
         {"Let's connect"}
       </Typography.Subtitle>
-      <div className="flex items-center gap-2">
+      <div className="flex flex-wrap items-center justify-between gap-4">
         <article className="w-8/12 text-xs">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.
+          <Typography.Description>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </Typography.Description>
         </article>
         <div className="flex flex-wrap gap-2">
           <Button

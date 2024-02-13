@@ -8,9 +8,7 @@ export default async function Projects() {
   return (
     <section id="projects">
       <div className="flex flex-col justify-between gap-6">
-        <Typography.Subtitle className="text-xl uppercase">
-          Projects
-        </Typography.Subtitle>
+        <Typography.Subtitle className="text-xl">Projects</Typography.Subtitle>
 
         <div className="flex flex-wrap gap-6">
           {projects?.data.map(
@@ -44,7 +42,6 @@ export default async function Projects() {
           color="default"
           variant="text"
           className="w-fit text-xs"
-          isLink
           target="_blank"
           href={`${process.env.NEXT_PUBLIC_GITHUB_PROFILE}?tab=repositories&q=&type=&language=typescript`}
           icon={
