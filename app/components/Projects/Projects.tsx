@@ -41,14 +41,11 @@ export default async function Projects() {
           label="View all projects"
           color="default"
           variant="text"
-          className="w-fit text-xs"
+          className="w-fit text-xs hover:bg-transparent"
           target="_blank"
           href={`${process.env.NEXT_PUBLIC_GITHUB_PROFILE}?tab=repositories&q=&type=&language=typescript`}
           icon={
-            <ArrowRightIcon
-              className="stroke h-3 w-3  stroke-slate-500 transition-all duration-300 ease-in-out group-hover/button:translate-x-1 group-hover/button:stroke-accentColor group-hover/button:stroke-2"
-              stroke="black"
-            />
+            <ArrowRightIcon className="h-3 w-3 stroke-slate-500 stroke-2 transition-all ease-in-out group-hover/button:translate-x-1 group-hover/button:stroke-accentColor" />
           }
         />
       </div>

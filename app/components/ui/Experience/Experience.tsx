@@ -16,14 +16,14 @@ export function Experience({
   endDate
 }: ExperienceProps) {
   return (
-    <article className="flex gap-8">
-      <span className="hidden w-2/12 text-xs text-slate-500  xl:flex">
+    <article className="flex">
+      <span className="hidden w-3/12 py-2 text-xs text-slate-500 xl:flex">
         {startDate} - {endDate}
       </span>
       <div className="flex w-full flex-col gap-2">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-wrap items-center justify-between gap-2 py-2">
           <strong className="leading-4">{title}</strong>
-          <span className="visible text-sm  text-slate-500 xl:hidden">
+          <span className="visible text-xs text-slate-500 xl:hidden">
             {startDate} - {endDate}
           </span>
         </div>

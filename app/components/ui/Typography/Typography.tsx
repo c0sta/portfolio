@@ -14,7 +14,7 @@ export function Typography({
   if (type === 'title') return <h1 className={className}>{children}</h1>
   if (type === 'subtitle') return <h2 className={className}>{children}</h2>
   if (type === 'description')
-    return <p className={className + 'leading-6'}>{children}</p>
+    return <p className={`${className} font-normal leading-6`}>{children}</p>
 }
 
 export const Title = ({ children, ...props }: Partial<TypographyProps>) => {

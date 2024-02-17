@@ -6,7 +6,7 @@ export const variants = {
   color: {
     primary: 'text-accentColor ',
     default: 'text-blackBackground dark:text-slate-50',
-    secondary: 'text-slate-500 dark:text-slate-400'
+    secondary: 'text-slate-600 dark:text-slate-300'
   }
 } as const
 
