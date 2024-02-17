@@ -1,3 +1,4 @@
 import { useDarkMode } from './useDarkMode'
+import { useMail } from './useMail'
 
-export { useDarkMode }
+export { useDarkMode, useMail }
