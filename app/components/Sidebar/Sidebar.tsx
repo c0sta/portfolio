@@ -5,21 +5,17 @@ import { GitHubIcon, LinkedInIcon } from '@/app/assets'
 import { useDarkMode } from '@/app/hooks'
 import { ButtonClient } from '@/app/components/ui/Button/ButtonClient'
 import { useMail } from '@/app/components/Greetings/useMail'
+import { useSidebar } from './useSidebar'
 
-export interface SidebarProps {
-  navOptions: Array<{
-    key: string
-    label: string
-  }>
-}
-export const Sidebar = ({ navOptions }: SidebarProps) => {
+export const Sidebar = () => {
   const { toggleTheme, isDarkThemeActive } = useDarkMode()
   const { emailMeHref } = useMail()
+  const { navOptions, activeAnchor } = useSidebar()
 
   return (
     <section
       data-cy="sidebar"
-      className="sticky top-0 hidden h-screen w-[30%] min-w-[300px] max-w-[300px] flex-col justify-between px-4 py-16 md:visible md:flex"
+      className="sticky top-0 hidden h-screen w-[30%] min-w-[300px] max-w-[300px] flex-col justify-between px-4 py-16 lg:visible lg:flex"
     >
       <div className="flex flex-col gap-16">
         <header>
@@ -37,7 +33,9 @@ export const Sidebar = ({ navOptions }: SidebarProps) => {
               href={`#${option.key}`}
               variant="text"
               color="default"
-              className="w-full"
+              className={`w-full ${
+                activeAnchor === option.key ? '--sidebar-anchor-active' : ''
+              }`}
             />
           ))}
         </nav>

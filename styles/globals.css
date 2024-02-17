@@ -26,6 +26,13 @@ body {
   border-radius: 8px;
 }
 @layer components {
+  ::-moz-selection {
+    @apply bg-accentColor text-white;
+  }
+
+  ::selection {
+    @apply bg-accentColor text-white;
+  }
   .base-button {
     @apply flex w-auto items-center gap-2 rounded-md px-3 py-2 transition-all duration-300 ease-in-out;
   }
@@ -66,5 +73,9 @@ body {
   .--text-default,
   .--icon-default {
     @apply stroke-slate-500 text-slate-500 hover:stroke-accentColor hover:text-accentColor dark:stroke-slate-300 dark:text-slate-300 dark:hover:text-accentColor;
+  }
+
+  .--sidebar-anchor-active {
+    @apply translate-x-2 bg-accentColorLight text-accentColor transition-all dark:text-accentColor;
   }
 }
