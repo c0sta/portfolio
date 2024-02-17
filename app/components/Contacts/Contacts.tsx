@@ -1,7 +1,6 @@
 import React from 'react'
-import { EnvelopeIcon } from '@heroicons/react/24/outline'
+import { PaperAirplaneIcon } from '@heroicons/react/24/outline'
 import { Button, Typography } from '@/app/components/ui'
-import { GitHubIcon, LinkedInIcon } from '@/app/assets'
 import { useMail } from '../Greetings/useMail'
 
 export default function Contacts() {
@@ -11,36 +10,23 @@ export default function Contacts() {
       <Typography.Subtitle className="text-xl ">
         {"Let's connect"}
       </Typography.Subtitle>
-      <div className="flex flex-wrap items-center justify-between gap-4">
-        <article className="w-8/12 text-xs">
+      <div className="flex flex-wrap items-center justify-between gap-4 lg:flex-nowrap">
+        <article className="w-full text-xs md:w-8/12">
           <Typography.Description>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.
           </Typography.Description>
         </article>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex max-h-[36px] w-full justify-end gap-2 md:w-fit">
           <Button
+            variant="contained"
+            label="Reach me out"
+            color="primary"
+            className="w-auto whitespace-nowrap text-sm font-semibold"
             href={emailMeHref}
-            variant="contained"
-            color="default"
-            className="h-11 w-11"
-            icon={<EnvelopeIcon className="self-center" />}
-          />
-          <Button
-            href={process.env.NEXT_PUBLIC_GITHUB_PROFILE ?? ''}
-            target="_blank"
-            variant="contained"
-            color="default"
-            className="h-11 w-11"
-            icon={<GitHubIcon className="self-center fill-white" />}
-          />
-          <Button
-            href={process.env.NEXT_PUBLIC_LINKEDIN_PROFILE ?? ''}
-            target="_blank"
-            variant="contained"
-            color="default"
-            className="h-11 w-11"
-            icon={<LinkedInIcon className="self-center fill-white" />}
+            icon={
+              <PaperAirplaneIcon className="h-4 w-4 stroke-2 transition-all group-hover/button:translate-x-1 " />
+            }
           />
         </div>
       </div>

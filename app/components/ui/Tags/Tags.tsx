@@ -10,7 +10,7 @@ export const Tags = ({ labels }: TagsProps) => {
       {labels.map((label, index) => (
         <span
           key={`${label.toLowerCase()}-${index}`}
-          className="w-fit rounded-2xl bg-accentColorLight px-4 py-1 text-xs text-accentColor"
+          className="w-fit rounded-2xl bg-accentColorLight px-4 py-1 text-xs font-medium text-accentColor"
         >
           {label}
         </span>
