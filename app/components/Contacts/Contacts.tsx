@@ -1,7 +1,7 @@
 import React from 'react'
 import { PaperAirplaneIcon } from '@heroicons/react/24/outline'
 import { Button, Typography } from '@/app/components/ui'
-import { useMail } from '../Greetings/useMail'
+import { useMail } from '@/app/hooks/useMail'
 
 export default function Contacts() {
   const { emailMeHref } = useMail()

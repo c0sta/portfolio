@@ -1,10 +1,9 @@
 'use client'
 import { EnvelopeIcon, MoonIcon, SunIcon } from '@heroicons/react/24/outline'
-import { Button, Typography } from '@/app/components/ui'
+import { TypeAnimation } from 'react-type-animation'
+import { Button, Typography, ButtonClient } from '@/app/components/ui'
 import { GitHubIcon, LinkedInIcon } from '@/app/assets'
-import { useDarkMode } from '@/app/hooks'
-import { ButtonClient } from '@/app/components/ui/Button/ButtonClient'
-import { useMail } from '@/app/components/Greetings/useMail'
+import { useDarkMode, useMail } from '@/app/hooks'
 import { useSidebar } from './useSidebar'
 
 export const Sidebar = () => {
@@ -20,9 +19,25 @@ export const Sidebar = () => {
       <div className="flex flex-col gap-16">
         <header>
           <Typography.Subtitle>Gabriel C. Moura</Typography.Subtitle>
-          <Typography.Subtitle color="primary">
-            Front-end Engineer
-          </Typography.Subtitle>
+          <TypeAnimation
+            sequence={[
+              'Front-end Engineer',
+              1000,
+              'Full-stack Dev.',
+              1000,
+              'Linux Enthusiast 🐧',
+              1000
+            ]}
+            wrapper="h2"
+            speed={1}
+            style={{
+              fontSize: '1.25rem',
+              display: 'inline-block',
+              color: '#5d5FEF',
+              fontWeight: 'bold'
+            }}
+            repeat={Infinity}
+          />
         </header>
 
         <nav className="mt-6 flex flex-col gap-2">
