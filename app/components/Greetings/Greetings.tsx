@@ -1,7 +1,9 @@
+'use client'
 import React from 'react'
+import { TypeAnimation } from 'react-type-animation'
+import { useMail } from '@/app/hooks'
 import { GitHubIcon, LinkedInIcon } from '@/app/assets'
 import { Typography, Button } from '@/app/components/ui'
-import { useMail } from './useMail'
 
 export const Greetings = () => {
   const { emailMeHref } = useMail()
@@ -16,11 +18,29 @@ export const Greetings = () => {
           <br />
           {"I'm Gabriel C. Moura"}
         </Typography.Title>
-        <Typography.Title color="primary" className="text-[2rem] md:text-4xl">
-          Front-end Engineer
-        </Typography.Title>
-        <Typography.Description className="text-sm">
-          Lorem Ipsum is simply dummy text of the printing .
+        <TypeAnimation
+          sequence={[
+            'Front-end Engineer',
+            1000,
+            'Full-stack Dev.',
+            1000,
+            'Linux Enthusiast',
+            1000
+          ]}
+          wrapper="h1"
+          speed={1}
+          style={{
+            fontSize: '2rem',
+            display: 'inline-block',
+            color: '#5d5FEF',
+            fontWeight: 'bold'
+          }}
+          repeat={Infinity}
+        />
+
+        <Typography.Description className="max-w-[360px] text-sm">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry.
         </Typography.Description>
       </div>
 

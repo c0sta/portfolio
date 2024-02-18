@@ -13,7 +13,8 @@ export default function Contacts() {
       <div className="flex flex-wrap items-center justify-between gap-4 lg:flex-nowrap">
         <article className="w-full text-xs md:w-8/12">
           <Typography.Description>
-          I'm happy to have you here! Let's connect and make some remarkable project together!
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
           </Typography.Description>
         </article>
         <div className="flex max-h-[36px] w-full justify-end gap-2 md:w-fit">
