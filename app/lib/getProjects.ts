@@ -23,6 +23,7 @@ interface ProjectImageCoverResponse {
       name: string
       width: number
       height: number
+      url: string
       formats: Record<
         'thumbnail' | 'small' | 'medium' | 'large',
         {
