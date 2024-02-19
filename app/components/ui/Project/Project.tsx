@@ -25,7 +25,11 @@ export function Project({
   seeLiveUrl
 }: ProjectProps) {
   return (
-    <section className="flex w-full  min-w-[230px] max-w-[430px] flex-col rounded-lg bg-slate-50 shadow-sm transition-all duration-300 ease-in-out hover:translate-y-1 hover:scale-105 hover:cursor-pointer hover:bg-slate-100 hover:shadow-sm dark:bg-blackBackgroundLight dark:hover:bg-blackBackgroundLight lg:w-6/12">
+    <a
+      href={seeLiveUrl}
+      target="_blank"
+      className="flex w-full  min-w-[230px] max-w-[430px] flex-col rounded-lg bg-slate-50 shadow-sm transition-all duration-300 ease-in-out hover:translate-y-1 hover:scale-105 hover:cursor-pointer hover:bg-slate-100 hover:shadow-sm dark:bg-blackBackgroundLight dark:hover:bg-blackBackgroundLight lg:w-6/12"
+    >
       {!!imageSrc.length && (
         <Image
           src={imageSrc}
@@ -61,6 +65,6 @@ export function Project({
         <Typography.Description>{description}</Typography.Description>
         <Tags labels={skills} />
       </section>
-    </section>
+    </a>
   )
 }

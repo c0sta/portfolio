@@ -25,7 +25,7 @@ export default async function Projects() {
             }) => (
               <Project
                 key={id}
-                imageSrc={`${process.env.NEXT_PUBLIC_API_URL}${cover.data[0].attributes.formats.large.url}`}
+                imageSrc={`${process.env.NEXT_PUBLIC_API_URL}${cover.data[0].attributes.url}`}
                 imageAlt=""
                 title={title}
                 description={description}

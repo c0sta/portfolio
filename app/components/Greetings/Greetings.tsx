@@ -24,7 +24,7 @@ export const Greetings = () => {
             1000,
             'Full-stack Dev.',
             1000,
-            'Linux Enthusiast',
+            'Linux Enthusiast 🐧',
             1000
           ]}
           wrapper="h1"

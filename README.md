@@ -1,38 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio
 
-## Getting Started
+![Vercel Deploy](https://therealsujitk-vercel-badge.vercel.app/?app=gabrielcmoura)
+[![portfolio](https://img.shields.io/endpoint?url=https://cloud.cypress.io/badge/simple/afskiz/main&style=flat&logo=cypress)](https://cloud.cypress.io/projects/afskiz/runs)
+[![Built with Next.js](https://img.shields.io/badge/Built_with-Next.js-000000.svg?style=flat&logo=next.js)](https://nextjs.org/)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/be638ddb-e8a5-4a24-b898-c38496f78a8d/deploy-status)](https://app.netlify.com/sites/gabrielcmoura/deploys)
+_Welcome to my personal portfolio website repository!_
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Responsive Design** - To ensure user experience on different screens.
+- **Documentation** - The components are documented using Storybook
+- **Analytics** - To understand how users are interacting with the website and get insights of improvements.
+- **CI/CD**
+  - Cypress E2E automated tests to ensure that features are working as expected
+  - Spelling validation using [CSpell](https://cspell.org/) to ensure that nothing was misspelled
+  - Vercel deployment
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Built With
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Tools and frameworks that I used to build my portfolio:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- [NextJS](https://nextjs.org/) - Pages and components development
+- [TailwindCSS](https://tailwindcss.com/) - Styling and theming
+- [Strapi](https://strapi.io/) - For content management
+- [Storybook](https://storybook.js.org/) - For component documentation
+- [Cypress](https://www.cypress.io/) - E2E and Component testing
+- [GitHub Actions](https://github.com/features/actions) - For CI/CD pipelines
+- [Figma](https://www.figma.com/) - Used to prototype the website
 
-## Learn More
+## Installation
 
-To learn more about Next.js, take a look at the following resources:
+To set up the project locally, please follow these steps:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Clone the repository: `git clone git@github.com:c0sta/portfolio.git`
+2. Install dependencies: `npm i` or `yarn`
+3. Start the development server: `npm run dev`
+4. Open your browser and navigate to [http://localhost:3000](http://localhost:3000)
