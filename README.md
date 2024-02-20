@@ -1,3 +1,6 @@
+![Portfolio Cover](https://portfolio-cms-production-5920.up.railway.app/uploads/Cover_7c5b2b243f.svg "Various images from my portfolio")
+
+
 # Portfolio
 
 ![Vercel Deploy](https://therealsujitk-vercel-badge.vercel.app/?app=gabrielcmoura)
