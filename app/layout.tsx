@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="overflow-y-auto overflow-x-hidden">
+    <html lang="en">
       {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID ? (
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />
       ) : null}
@@ -34,7 +34,6 @@ export default function RootLayout({
               : 'development'
           }
         />
-        ;
       </body>
     </html>
   )

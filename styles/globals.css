@@ -2,17 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  * {
-    scroll-behavior: smooth;
-    scroll-padding-top: 2rem;
-  }
-}
-
 body {
   width: 100vw;
   height: 100vh;
   scrollbar-width: thin;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 *::-webkit-scrollbar {
