@@ -1,3 +1,4 @@
+'use client'
 import { getStyles } from './constants'
 import { ButtonProps } from './types'
 
@@ -8,16 +9,24 @@ export const Button = ({
   label,
   className = '',
   href = '',
-  target = ''
+  target = '',
+  onClick
 }: ButtonProps) => {
+  const style = `group/button ${getStyles(variant).variant[variant]} ${getStyles(variant).color[color]} ${className}`
+
+  if (href) {
+    return (
+      <a className={style} href={href} target={target}>
+        {label}
+        {icon}
+      </a>
+    )
+  }
+
   return (
-    <a
-      className={`group/button ${getStyles(variant).variant[variant]} ${getStyles(variant).color[color]} ${className}`}
-      href={href}
-      target={target}
-    >
+    <button className={style} onClick={onClick}>
       {label}
       {icon}
-    </a>
+    </button>
   )
 }

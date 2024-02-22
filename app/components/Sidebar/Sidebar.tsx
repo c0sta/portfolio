@@ -1,7 +1,7 @@
 'use client'
 import { EnvelopeIcon, MoonIcon, SunIcon } from '@heroicons/react/24/outline'
 import { TypeAnimation } from 'react-type-animation'
-import { Button, Typography, ButtonClient } from '@/app/components/ui'
+import { Button, Typography } from '@/app/components/ui'
 import { GitHubIcon, LinkedInIcon } from '@/app/assets'
 import { useDarkMode, useMail } from '@/app/hooks'
 import { useSidebar } from './useSidebar'
@@ -60,7 +60,7 @@ export const Sidebar = () => {
         data-cy="sidebar-contacts"
         className="flex flex-wrap items-center justify-between"
       >
-        <ButtonClient
+        <Button
           icon={
             isDarkThemeActive ? (
               <SunIcon className="h-6 w-6 stroke-slate-500 group-hover/button:stroke-accentColor" />

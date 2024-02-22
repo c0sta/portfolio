@@ -36,7 +36,6 @@ export default async function Experiences() {
         color="default"
         variant="text"
         className="w-fit text-xs hover:bg-transparent"
-        onClick={() => window.open(process.env.NEXT_PUBLIC_RESUME_DOWNLOAD)}
         icon={
           <ArrowRightIcon className="h-3 w-3 stroke-slate-500  stroke-2 transition-all ease-in-out group-hover/button:translate-x-1 group-hover/button:stroke-accentColor" />
         }

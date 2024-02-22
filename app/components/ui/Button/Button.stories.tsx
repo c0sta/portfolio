@@ -6,7 +6,6 @@ import {
   ListBulletIcon,
   Squares2X2Icon
 } from '@heroicons/react/24/outline'
-import { ButtonClient } from './ButtonClient'
 
 const meta: Meta<typeof Button> = {
   component: Button,
@@ -21,18 +20,18 @@ export const Contained: Story = {
     color: 'primary',
     label: 'Get in touch'
   },
-  render: (args) => <ButtonClient {...args} />
+  render: (args) => <Button {...args} />
 }
 
 export const Icon: Story = {
   render: () => (
     <div className="flex gap-3">
-      <ButtonClient
+      <Button
         variant="contained"
         color="primary"
         icon={<GitHubIcon className="h-7 w-7 self-center fill-white" />}
       />
-      <ButtonClient
+      <Button
         label="View my resume"
         variant="contained"
         color="default"
@@ -40,7 +39,7 @@ export const Icon: Story = {
           <ArrowRightIcon className="h-5 w-5 stroke-slate-50" stroke="black" />
         }
       />
-      <ButtonClient
+      <Button
         label="View my resume"
         variant="text"
         color="default"
@@ -51,14 +50,14 @@ export const Icon: Story = {
           />
         }
       />
-      <ButtonClient
+      <Button
         variant="icon"
         color="default"
         icon={
           <Squares2X2Icon className="h-5 w-5 stroke-slate-500 group-hover/button:stroke-accentColor" />
         }
       />
-      <ButtonClient
+      <Button
         variant="icon"
         color="default"
         icon={
@@ -75,7 +74,7 @@ export const Outlined: Story = {
     color: 'primary',
     label: 'Get in touch'
   },
-  render: (args) => <ButtonClient {...args} />
+  render: (args) => <Button {...args} />
 }
 
 export const Text: Story = {
@@ -84,7 +83,7 @@ export const Text: Story = {
     color: 'primary',
     label: 'Get in touch'
   },
-  render: (args) => <ButtonClient {...args} />
+  render: (args) => <Button {...args} />
 }
 
 export default meta

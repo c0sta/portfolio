@@ -1,6 +1,5 @@
 import Image from 'next/image'
-import { Typography } from '@/app/components'
-import { ButtonClient } from '@/app/components/ui/Button/ButtonClient'
+import { Typography, Button } from '@/app/components'
 import { getSummaries } from '@/app/lib/getSummaries'
 import { getSkills } from '@/app/lib/getSkills'
 
@@ -26,7 +25,7 @@ export default async function Summary() {
           {skills.data
             .sort((a, b) => a.id - b.id)
             .map((skill) => (
-              <ButtonClient
+              <Button
                 key={skill.id}
                 color="default"
                 variant="contained"

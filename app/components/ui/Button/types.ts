@@ -4,6 +4,6 @@ export interface ButtonProps extends Partial<HTMLButtonElement> {
   icon?: React.ReactNode
   label?: string
   onClick?: () => void
-  href: string
+  href?: string
   target?: string
 }
