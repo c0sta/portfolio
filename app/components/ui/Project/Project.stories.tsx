@@ -15,7 +15,7 @@ export const Default: Story = {
     imageSrc:
       'https://cdn.dribbble.com/userupload/10135135/file/original-a485f51a500a8b96e273229a3017c4b7.png',
     imageAlt: '',
-    title: 'quimicAR',
+    title: 'Awesome Project',
     description:
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
     skills: ['React', 'Node', 'Typescript'],

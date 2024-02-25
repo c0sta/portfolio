@@ -21,5 +21,6 @@ export const contentMocked = {
   large:
     'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the s standard dummy text ever since the 1500s, when an unknown printer  a galley of type and scrambled it to make a type specimen book.',
   small:
-    'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+  title: "Some Title"
 }

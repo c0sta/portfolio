@@ -34,14 +34,6 @@ export const Default: Story = {
   render: (args) => <Typography {...args}>{contentMocked.large}</Typography>
 }
 
-export const Light: Story = {
-  args: {
-    ...defaultProps,
-    weight: 'light'
-  },
-  render: (args) => <Typography {...args}>{contentMocked.large}</Typography>
-}
-
 export const Bold: Story = {
   args: {
     ...defaultProps,
@@ -55,7 +47,7 @@ export const ExtraLarge: Story = {
     ...defaultProps,
     size: 'xlg'
   },
-  render: (args) => <Typography {...args}>{contentMocked.small}</Typography>
+  render: (args) => <Typography {...args}>{contentMocked.title}</Typography>
 }
 
 export const Large: Story = {

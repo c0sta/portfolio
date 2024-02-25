@@ -1,5 +1,4 @@
 import type { Preview } from "@storybook/react";
-// import { themes } from "@storybook/theming";
 import "../styles/globals.css";
 
 const preview: Preview = {
@@ -11,10 +10,8 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
-    // docs: {
-    //   theme: themes.dark,
-    // },
   },
+
 };
 
 export default preview;
