@@ -38,10 +38,10 @@ export const Greetings = () => {
           repeat={Infinity}
         />
 
-        <Typography.Description className="max-w-[360px] text-sm">
+        {/* <Typography.Description className="max-w-[360px] text-sm">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.
-        </Typography.Description>
+        </Typography.Description> */}
       </div>
 
       <div
