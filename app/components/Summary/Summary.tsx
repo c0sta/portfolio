@@ -12,9 +12,14 @@ export default async function Summary() {
       <article className="w-full xl:w-8/12">
         <Typography.Subtitle className="text-xl">About me</Typography.Subtitle>
         <br />
-        <Typography.Description>
-          {summary.data[0].attributes.about}
-        </Typography.Description>
+        {summary.data[0].attributes.about
+          .split('\n')
+          .map((paragraph, index) => (
+            <Typography.Description key={index}>
+              {paragraph.replace('\\n', '')}
+              <br />
+            </Typography.Description>
+          ))}
       </article>
 
       <section className="w-full xl:w-4/12">
