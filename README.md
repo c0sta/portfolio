@@ -7,6 +7,7 @@
 ![Vercel Deploy](https://therealsujitk-vercel-badge.vercel.app/?app=gabrielcmoura)
 [![portfolio](https://img.shields.io/endpoint?url=https://cloud.cypress.io/badge/simple/afskiz/main&style=flat&logo=cypress)](https://cloud.cypress.io/projects/afskiz/runs)
 [![Built with Next.js](https://img.shields.io/badge/Built_with-Next.js-000000.svg?style=flat&logo=next.js)](https://nextjs.org/)
+[![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/design/1ojFxymdjH4mWoIsF5HPdk/Portfolio?node-id=0-1&t=LW68EzwBH3Mjlajl-1)
 
 _Welcome to my personal portfolio website repository!_
 
