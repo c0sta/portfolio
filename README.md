@@ -1,4 +1,5 @@
-![Portfolio Cover](https://portfolio-cms-production-5920.up.railway.app/uploads/Cover_7c5b2b243f.svg "Various images from my portfolio")
+
+![Cover](https://github.com/user-attachments/assets/a9604e87-3892-49c9-9f9e-45b25e666026)
 
 
 # Portfolio
